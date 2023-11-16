@@ -35,7 +35,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '11' # Define a versão do Java que deseja utilizar
+          distribution: 'adopt'
+          java-version: '17'
 
       - name: Run tests with Maven
         run: mvn test # Comando para executar os testes do projeto
