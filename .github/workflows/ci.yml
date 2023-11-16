@@ -20,7 +20,7 @@ jobs:
           java-version: '17'
 
       - name: Construir com Maven # Incluindo as dependencias
-        run: mvn -B clean package
+        run: mvn clean install -B -V
 
       - name: Executar testes # Executando os testes
         run: mvn test
