@@ -1,49 +1,26 @@
-name: Java CI
+name: CI/CD
 
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - main # A pipeline será executada a cada push na branch main
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Configurando a maquina virtual de teste
 
     steps:
-      - name: Checkout code
+      - name: Checkout código # Faz um git clone da nossa branch, e chega o código
         uses: actions/checkout@v2
 
-      - name: Set up JDK
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11' # Define a versão do Java que deseja utilizar
-
-
-      - name: Build with Maven
-        run: mvn clean install -B -V # Comando para realizar a build do projeto
-
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up JDK
-        uses: actions/setup-java@v2
+      - name: Configurar JDK 11
+        uses: actions/setup-java@v2 # Configurando o ambiente java
         with:
           distribution: 'adopt'
           java-version: '17'
-
-      - name: Run tests with Maven
-        run: mvn test # Comando para executar os testes do projeto
 
       - name: Construir com Maven # Incluindo as dependencias
         run: mvn clean install -B -V
 
       - name: Executar testes # Executando os testes
         run: mvn test
-
