@@ -39,10 +39,10 @@ jobs:
 
       - name: Run tests with Maven
         run: mvn test # Comando para executar os testes do projeto
-=======
+
       - name: Construir com Maven # Incluindo as dependencias
         run: mvn clean install -B -V
 
       - name: Executar testes # Executando os testes
         run: mvn test
->>>>>>> 6efc22e7d3c2818b1e7f865c92435acc3fe2454d
+
