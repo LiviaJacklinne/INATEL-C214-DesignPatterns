@@ -8,4 +8,12 @@ Exercício com Design Pattern Observer
 - Letícia Vitória Merss Moreira / 56 / GES
 - Lívia Jacklinne Ramos Moreira / 1731 / GEC
 
-## Configurações do projeto
+## Descrição do projeto:
+   Trata-se de uma aplicação, utilizando o padrão observer, onde o programa recebe uma frase e esta é subdividida em palavras (Strings) e contém as seguintes funcionalidades:
+   - Contador de palavras;
+   - Contador de palavras com quantidades pares de caracteres;
+   - Contador de palavras que iniciam com maiúsculas.
+
+## Execução dos testes:
+   Para rodar os testes presentes no projeto basta executar a classe 'TesteObserver'.
+   
